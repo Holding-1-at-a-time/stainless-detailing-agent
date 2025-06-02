@@ -1,6 +1,6 @@
 {
   "name": "detailing_agent",
-  "version": "0.0.1-alpha.0",
+  "version": "1.0.0",
   "description": "The official TypeScript library for the Detailing Agent API",
   "author": "Detailing Agent <support@autodetailing.ai>",
   "types": "dist/index.d.ts",
