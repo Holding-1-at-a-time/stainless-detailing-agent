@@ -42,15 +42,15 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```sh
-$ npm install git+ssh://git@github.com:stainless-sdks/detailing_agent-typescript.git
+$ npm install git+ssh://git@github.com:Holding-1-at-a-time/stainless-detailing-agent.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```sh
 # Clone
-$ git clone https://www.github.com/stainless-sdks/detailing_agent-typescript
-$ cd detailing_agent-typescript
+$ git clone https://www.github.com/Holding-1-at-a-time/stainless-detailing-agent
+$ cd stainless-detailing-agent
 
 # With yarn
 $ yarn link
