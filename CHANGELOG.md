@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.1 (2025-06-07)
+
+Full Changelog: [v1.0.0...v1.0.1](https://github.com/Holding-1-at-a-time/stainless-detailing-agent/compare/v1.0.0...v1.0.1)
+
+### Chores
+
+* adjust eslint.config.mjs ignore pattern ([dd16638](https://github.com/Holding-1-at-a-time/stainless-detailing-agent/commit/dd16638d4a344983b73666645b846082e52c5f00))
+* avoid type error in certain environments ([adfe5ca](https://github.com/Holding-1-at-a-time/stainless-detailing-agent/commit/adfe5ca04297811fe1ce1848e8e53dd53e44b1fc))
+* **docs:** use top-level-await in example snippets ([46965f0](https://github.com/Holding-1-at-a-time/stainless-detailing-agent/commit/46965f0e21147e1803dd92ce217a262b466ca382))
+* **internal:** fix readablestream types in node 20 ([fb8e7a6](https://github.com/Holding-1-at-a-time/stainless-detailing-agent/commit/fb8e7a69a7911a1feb5373a89302771aaf2bce42))
+
 ## 1.0.0 (2025-06-02)
 
 Full Changelog: [v0.0.1-alpha.0...v1.0.0](https://github.com/Holding-1-at-a-time/stainless-detailing-agent/compare/v0.0.1-alpha.0...v1.0.0)
