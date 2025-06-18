@@ -1,6 +1,6 @@
 # Detailing Agent TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/detailing_agent.svg)](https://npmjs.org/package/detailing_agent) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/detailing_agent)
+[![NPM version](<https://img.shields.io/npm/v/detailing_agent.svg?label=npm%20(stable)>)](https://npmjs.org/package/detailing_agent) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/detailing_agent)
 
 This library provides convenient access to the Detailing Agent REST API from server-side TypeScript or JavaScript.
 
