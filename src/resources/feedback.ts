@@ -34,7 +34,7 @@ export interface FeedbackRequest {
 
   comments?: string | null;
 
-  service_aspect_ratings?: Record<string, number>;
+  service_aspect_ratings?: { [key: string]: number };
 }
 
 export interface FeedbackSubmitResponse extends FeedbackRequest {
@@ -55,7 +55,7 @@ export interface FeedbackSubmitParams {
 
   comments?: string | null;
 
-  service_aspect_ratings?: Record<string, number>;
+  service_aspect_ratings?: { [key: string]: number };
 }
 
 export declare namespace Feedback {

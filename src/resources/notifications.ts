@@ -45,7 +45,7 @@ export interface NotificationSendProactiveParams {
 
   template_id?: string | null;
 
-  template_variables?: Record<string, string> | null;
+  template_variables?: { [key: string]: string } | null;
 }
 
 export declare namespace Notifications {

@@ -45,7 +45,7 @@ export interface CommunicationRequest {
 
   template_id?: string | null;
 
-  template_variables?: Record<string, string> | null;
+  template_variables?: { [key: string]: string } | null;
 }
 
 export interface CommunicationSendParams {
@@ -68,7 +68,7 @@ export interface CommunicationSendParams {
 
   template_id?: string | null;
 
-  template_variables?: Record<string, string> | null;
+  template_variables?: { [key: string]: string } | null;
 }
 
 export declare namespace Communications {
