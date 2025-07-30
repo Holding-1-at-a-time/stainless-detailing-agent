@@ -46,10 +46,6 @@
     "typescript": "5.8.3",
     "typescript-eslint": "8.31.1"
   },
-  "imports": {
-    "detailing_agent": ".",
-    "detailing_agent/*": "./src/*"
-  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
