@@ -1,6 +1,6 @@
 # Detailing Agent TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/detailing_agent.svg)](https://npmjs.org/package/detailing_agent) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/detailing_agent)
+[![NPM version](<https://img.shields.io/npm/v/detailing_agent.svg?label=npm%20(stable)>)](https://npmjs.org/package/detailing_agent) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/detailing_agent)
 
 This library provides convenient access to the Detailing Agent REST API from server-side TypeScript or JavaScript.
 
@@ -27,14 +27,10 @@ const client = new DetailingAgent({
   environment: 'sandbox', // defaults to 'production'
 });
 
-async function main() {
-  const damageAssessment = await client.damageAssessments.create({
-    damage_items: [{ damage_type: 'scratch', location: 'driver_door', severity: 'minor' }],
-    vehicle_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-  });
-}
-
-main();
+const damageAssessment = await client.damageAssessments.create({
+  damage_items: [{ damage_type: 'scratch', location: 'driver_door', severity: 'minor' }],
+  vehicle_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+});
 ```
 
 ### Request & Response types
@@ -50,15 +46,11 @@ const client = new DetailingAgent({
   environment: 'sandbox', // defaults to 'production'
 });
 
-async function main() {
-  const params: DetailingAgent.DamageAssessmentCreateParams = {
-    damage_items: [{ damage_type: 'scratch', location: 'driver_door', severity: 'minor' }],
-    vehicle_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-  };
-  const damageAssessment: DetailingAgent.DamageAssessment = await client.damageAssessments.create(params);
-}
-
-main();
+const params: DetailingAgent.DamageAssessmentCreateParams = {
+  damage_items: [{ damage_type: 'scratch', location: 'driver_door', severity: 'minor' }],
+  vehicle_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+};
+const damageAssessment: DetailingAgent.DamageAssessment = await client.damageAssessments.create(params);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -71,24 +63,20 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const damageAssessment = await client.damageAssessments
-    .create({
-      damage_items: [{ damage_type: 'scratch', location: 'driver_door', severity: 'minor' }],
-      vehicle_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
-    })
-    .catch(async (err) => {
-      if (err instanceof DetailingAgent.APIError) {
-        console.log(err.status); // 400
-        console.log(err.name); // BadRequestError
-        console.log(err.headers); // {server: 'nginx', ...}
-      } else {
-        throw err;
-      }
-    });
-}
-
-main();
+const damageAssessment = await client.damageAssessments
+  .create({
+    damage_items: [{ damage_type: 'scratch', location: 'driver_door', severity: 'minor' }],
+    vehicle_id: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+  })
+  .catch(async (err) => {
+    if (err instanceof DetailingAgent.APIError) {
+      console.log(err.status); // 400
+      console.log(err.name); // BadRequestError
+      console.log(err.headers); // {server: 'nginx', ...}
+    } else {
+      throw err;
+    }
+  });
 ```
 
 Error codes are as follows:
@@ -256,9 +244,8 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.foo.create({
-  foo: 'my_param',
-  bar: 12,
+client.damageAssessments.create({
+  // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
 });
